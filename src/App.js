@@ -1,29 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import ReactDOM from "react-dom/client";
+import Series from './componentes/Series';
+import Peliculas from './componentes/Peliculas';
+import Layout from './componentes/Layout';
+import Inicio from './componentes/Inicio';
+import NoPage from './componentes/NoPage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          Modificacion Romi
-          otra Modificacion
-          Modificacion Ger
-          Modificacion Leo
-
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Inicio />} />
+          <Route path="series" element={<Series />} />
+          <Route path="peliculas" element={<Peliculas />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
