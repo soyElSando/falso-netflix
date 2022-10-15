@@ -15,7 +15,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
+
           Modificacion Romi
+          Modificacion Ger
+
         </a>
       </header>
     </div>
