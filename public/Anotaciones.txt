@@ -1,0 +1,50 @@
+Carpetas:
+
+Componentes llamarlo features
+
+Pasar App a features?
+
+features/home/ -components
+               -services
+               -hooks
+auth/
+movies/
+series/
+user/
+
+...
+features/
+core/ -> Auth Login
+shared/
+common/
+
+
+common/components para cosas visuales que se repitan (como botones)
+
+utils/ (para constantes globales)
+     /logger.js
+
+---
+
+Un layout para cada "composición de vista"
+(uno para el login y otro para la vista loggeada (banner contenido footer))
+
+Diagramas de flujo del profe:
+https://drive.google.com/file/d/1-WncJ4ztztMLztogS3N3qN52FZpapdj8/view?usp=sharing
+
+
+variables de entorno:
+archivo .env (al mismo nivel que el package)
+VITE_***
+REACT_APP_***
+
+import.meta.env.VITE_VAR
+process.env.REACT_APP_VAR
+
+API_KEY
+
+#Comentario
+
+Tener un entorno de dev y otro de producción
+
+VITE_MODE = DEV
