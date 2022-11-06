@@ -8,6 +8,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  color: white;
+  background-color: var(--color--primary);
+}
+
 :root {
   --color--primary: #141414;
 }
