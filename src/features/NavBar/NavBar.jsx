@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 
+
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
-        <div className="container-fluid">
+        <h2 className="container-fluid">
             <Link className="navbar-brand text-danger" to='/'>Falso Netflix</Link>
             <button
                 className="navbar-toggler"
@@ -24,7 +25,7 @@ const NavBar = () => {
                 </div>
             </div>
             <button className="btn btn-dark">Logout</button>
-        </div>
+        </h2>
     </nav>
   )
 }
