@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-
+import { SECCIONES } from "../../utils/constants";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
         <h2 className="container-fluid">
             <Link className="navbar-brand text-danger" to='/'>Falso Netflix</Link>
             <button
@@ -20,8 +20,13 @@ const NavBar = () => {
             <div className="collapse navbar-collapse " id="navbarDropdown">
                 <div className="navbar-nav">
                     <Link className="nav-link" to='/'>Inicio</Link>
-                    <Link className="nav-link" to='/peliculas'>Peliculas</Link>
-                    <Link className="nav-link" to='/series'>Series</Link>
+                    {SECCIONES.map(seccion=>{
+                        const link="/"+seccion.toLowerCase();
+                        return(
+                            <Link className="nav-link" to={link}>{seccion}</Link>
+                        )
+                    })}
+                    
                 </div>
             </div>
             <button className="btn btn-dark">Logout</button>
@@ -31,3 +36,7 @@ const NavBar = () => {
 }
 
 export default NavBar
+
+
+//<Link className="nav-link" to='/peliculas'>Peliculas</Link>
+//<Link className="nav-link" to='/series'>Series</Link>

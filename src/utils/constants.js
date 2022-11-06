@@ -5,3 +5,5 @@ export const CONSTANTS = {
   },
 };
 
+export const SECCIONES=["Peliculas", "Series"]
+
