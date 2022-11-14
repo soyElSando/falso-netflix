@@ -1,13 +1,7 @@
-import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Layout from '../Layout/Layout';
-import Login from "../Login/Login";
-import Inicio from "../Inicio/Inicio";
-import Series from "../Series/Series";
-import Peliculas from "../Peliculas/Peliculas";
-import NoPage from "../404/NoPage";
-import ProtectedRoutes from "../rutas/ProtectedRoutes"
-import PublicRoutes from './PublicRoutes';
+import {Layout, Login, Inicio, Series, Peliculas, NoPage} from "../../features"
+import ProtectedRoutes from "./ProtectedRoutes"
+import PublicRoutes from './PublicRoutes'; 
 
 const AppRoutes = () => {
   return (

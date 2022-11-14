@@ -17,8 +17,8 @@ export const TMDBServices = {
   getPopularMovies: async () => {
     const url = TMDB_API.baseUrl + TMDB_API.movies.popular;
     const movies = await fetch(url);
-    const moviesJson = await movies.json();
-    return moviesJson;
+    const {results} = await movies.json();
+    return results;
   },
 
   getTopRatedMovies: async () => {

@@ -1,7 +1,20 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { SECCIONES } from "../../utils/constants";
+import { AuthContext } from "../../features";
 
 const NavBar = () => {
+
+    const navigate = useNavigate();
+
+    const { setIsAuth, setUser } = useContext(AuthContext);
+    
+    const onLogout =() => {
+    setIsAuth(false);
+    setUser(null);
+    navigate("/Login");
+    }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
         <h2 className="container-fluid">
@@ -29,7 +42,7 @@ const NavBar = () => {
                     
                 </div>
             </div>
-            <button className="btn btn-dark">Logout</button>
+            <button className="btn btn-dark" onClick={onLogout}>Logout</button>
         </h2>
     </nav>
   )
