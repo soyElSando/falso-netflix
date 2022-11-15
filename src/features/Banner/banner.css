@@ -1,0 +1,24 @@
+.miBanner{
+    width: "20%" !important;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    margin: 0 !important;
+    padding: 0 !important;    
+}
+
+.contenedor{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.bannerTitle{
+    color: rgb(255, 255, 255) !important;
+    text-align: start !important;
+}
+
+.opacityBackground{
+    background-image: linear-gradient(0deg,rgba(0,0,0,.7) 10%,transparent);
+    
+}

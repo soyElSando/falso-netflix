@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { SECCIONES } from "../../utils/constants";
 import { AuthContext } from "../../features";
+import "./navBar.css"
 
 const NavBar = () => {
 
@@ -16,8 +17,8 @@ const NavBar = () => {
     }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-        <h2 className="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top m-0 p-0">
+        <h2 className="container-fluid navigationBar w-100">
             <Link className="navbar-brand text-danger" to='/'>Falso Netflix</Link>
             <button
                 className="navbar-toggler"
@@ -42,7 +43,7 @@ const NavBar = () => {
                     
                 </div>
             </div>
-            <button className="btn btn-dark" onClick={onLogout}>Logout</button>
+            <button className="btn btn-dark logout" onClick={onLogout}>Logout</button>
         </h2>
     </nav>
   )
