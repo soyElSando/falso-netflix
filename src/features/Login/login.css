@@ -1,0 +1,19 @@
+.logo{
+    font-size : 24px;
+    text-align : left;
+}
+
+.form-wrapper{
+    position: flex;
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgba(0,0,0,.75);
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 20px 0 30px;
+    max-width: 380px ;
+}
+
+.form-group{
+    min-height: 35px;
+}

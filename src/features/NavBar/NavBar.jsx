@@ -19,7 +19,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top m-0 p-0">
         <h2 className="container-fluid navigationBar w-100">
-            <Link className="navbar-brand text-danger" to='/'>Falso Netflix</Link>
+            <Link className="navbar-brand text-danger logo" to='/'>Falso Netflix</Link>
             <button
                 className="navbar-toggler"
                 type="button"
