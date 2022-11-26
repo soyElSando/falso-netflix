@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { AuthContext, Banner} from "../../../features";
+import { AuthContext} from "../../../features";
 
 export const Inicio = () => {
   const { user } = useContext(AuthContext);
-
-  return (<div className="container-fluid text-center m-0 p-0">
-    <Banner />
-  </div>
+  return (
+  <h1>
+    Bienvenido {user.split("@")[0]}
+  </h1>
   )
 
 }

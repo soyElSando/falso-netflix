@@ -13,12 +13,19 @@
     padding: 0 !important;
 }
 
-.bannerTitle{
-    color: rgb(255, 255, 255) !important;
-    text-align: start !important;
+.opacityBackground{
+    background-image: linear-gradient(0deg,rgba(0,0,0,.8) 10%,transparent);
+    color: white;
 }
 
-.opacityBackground{
-    background-image: linear-gradient(0deg,rgba(0,0,0,.7) 10%,transparent);
-    
+.fill-container{
+    bottom: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    left: 4%;
+    position: absolute;
+    top: 0;
+    width: 36%;
+    z-index: 10;
 }

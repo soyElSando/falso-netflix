@@ -1,8 +1,9 @@
-import { TMDBServices } from "../../../commons/services/TMDB_API";
+import {Banner} from "../../../features";
 
 export const Peliculas = () => {
-  console.log(TMDBServices.getPopularMovies());
   return <>
-  <h1>Peliculas</h1>
+  <div className="container-fluid text-center m-0 p-0">
+  <Banner />
+  </div>
   </>;
 };
