@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../features";
+import { AuthContext } from "features";
 
 const useLogin = () => {
     const navigate = useNavigate();
 
-  const { setIsAuth, setUser, isAuth } = useContext(AuthContext);
+  const { setIsAuth, setUser } = useContext(AuthContext);
 
   const [form, setForm] = useState ({
     email:"",

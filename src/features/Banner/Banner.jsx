@@ -1,27 +1,24 @@
 import { useEffect, useState } from "react"
-import getRandomMovie from "./getRandomMovie"
 import "./banner.css"
 
 
-export const Banner = () => {
+export const Banner = ({movies}) => {
 
   const [movie, setMovie] = useState({})
 
-  const getMovie = async () => {
-    const {backdropHigh,title, description} =  await getRandomMovie()
-    setMovie({backdropHigh,title, description})
+  
+  const setRandomMovie = ()  =>{
+    const i= Math.floor(Math.random()*movies.length)
+    setMovie (movies[i])
   }
-    
+
   useEffect(() => {
-    getMovie()
+    setRandomMovie()
     const timer = setInterval(() =>{
-      getMovie()
+      setRandomMovie()
     }, 7000)
     return () => clearInterval(timer);
-  
   },[])
-
-    const BASE_URL = "https://image.tmdb.org/t/p/w500"
   
   return (
   

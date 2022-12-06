@@ -1,4 +1,5 @@
 const API_KEY = process.env.REACT_APP_API_KEY;
+const LANGUAGE = "es-ES";
 
 const TMDB_API = {
   baseUrl: "https://api.themoviedb.org/3",
@@ -6,12 +7,12 @@ const TMDB_API = {
   baseImageLow: "https://image.tmdb.org/t/p/w300/",
 
   movies: {
-    popular: "/movie/popular?api_key=" + API_KEY,
-    topRated: "/movie/top_rated?api_key=" + API_KEY,
+    popular: "/movie/popular?api_key=" + API_KEY+"&language=" + LANGUAGE,
+    topRated: "/movie/top_rated?api_key=" + API_KEY+"&language=" + LANGUAGE,
   },
   series: {
-    popular: "/tv/popular?api_key=" + API_KEY,
-    topRated: "tv/top_rated?api_key=" + API_KEY,
+    popular: "/tv/popular?api_key=" + API_KEY+"&language=" + LANGUAGE,
+    topRated: "/tv/top_rated?api_key=" + API_KEY+"&language=" + LANGUAGE,
   },
 };
 

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { SECCIONES } from "../../utils/constants";
-import { AuthContext } from "../../features";
+import { SECCIONES } from "utils/constants";
+import { AuthContext } from "features";
 import "./navBar.css"
 
 const NavBar = () => {

@@ -1,5 +1,5 @@
 import { useContext} from 'react';
-import { AuthContext } from '../../features';
+import { AuthContext } from 'features';
 import { Navigate } from 'react-router-dom';
 
 const ProtectedRoutes = ({children}) => {
