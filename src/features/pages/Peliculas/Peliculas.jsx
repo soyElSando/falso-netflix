@@ -1,4 +1,4 @@
-import {Banner, Spinner} from "features";
+import {Banner, Spinner, SwipImages_peliculas} from "features";
 import {useFetch, TMDBServices} from "commons/services"
 
 export const Peliculas = () => {
@@ -7,7 +7,11 @@ export const Peliculas = () => {
 
   return <>
   <div className="container-fluid text-center m-0 p-0">
-  {!isLoading ? <Banner movies={data}/> : <Spinner />}
+  {!isLoading ? <>
+  <Banner movies={data}/> 
+  <SwipImages_peliculas />
+  </>
+  : <Spinner />}
   </div>
   </>;
 };

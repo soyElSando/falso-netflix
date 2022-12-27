@@ -1,24 +1,29 @@
 import { useFetch, TMDBServices } from "commons/services"
 import { Carrousel } from "features";
+import {SwipImages_peliculas, SwipImages_series, Spinner, Banner} from "features";
 
 export const Inicio = () => {
   const {
-    data: dataSeries,
-    error: errorSeries,
-    isLoading: isLoadingSeries,
-  } = useFetch(TMDBServices.getTopRatedSeries);
-  const {
-    data: dataMovies,
-    error: errorMovies,
-    isLoading: isLoadingMovies,
-  } = useFetch(TMDBServices.getTopRatedMovies);
-  if (errorSeries) console.error(errorSeries);
-  if (errorMovies) console.error(errorMovies);
+    data: data,
+    error: error,
+    isLoading: isLoading,
+  } = useFetch(
+    (Math.floor((Math.random()*2))) 
+    ? TMDBServices.getTopRatedSeries 
+    : TMDBServices.getTopRatedMovies);
+  
+  if (error) console.error(error);
 
   return <>
-  <div className="container m-0 p-0">
-    <Carrousel data={dataSeries} isLoading={isLoadingSeries}/>
-    <Carrousel data={dataMovies} isLoading={isLoadingMovies}/>
+  <div className="container-fluid text-center m-0 p-0">
+    {/* <Carrousel data={dataSeries} isLoading={isLoadingSeries}/>
+    <Carrousel data={dataMovies} isLoading={isLoadingMovies}/> */}
+    {!isLoading ? 
+    <>
+    <Banner movies={data}/>
+    <SwipImages_peliculas />
+    <SwipImages_series />
+    </> : <Spinner />}
   </div>
   </>;
 
