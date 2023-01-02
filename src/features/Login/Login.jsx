@@ -69,7 +69,7 @@ return <div className="text-center">
         </div>
       </form>
       {isLoading && <p>Cargando...</p>}
-      {error && <p className="alert alert-warning">usuario y/o contraseña incorrectos</p>}
+      {error && <p className="alert alert-warning">error de logueo</p>}
     </div>
   </div>;
 }
