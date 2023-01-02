@@ -2,13 +2,13 @@ import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { Card } from "features";
-import { TMDBServices, useFetch } from 'commons/services';
+import { TMDBServices, useFetch } from 'commons';
 import "swiper/css/navigation";
 import "swiper/css";
 import "swiper/css/bundle";
 import "./SwipStyles.css";
 
-export const SwipImages_series = () => {
+export const SwipImagesSeries = () => {
 
   const { data, isLoading } = useFetch(TMDBServices.getPopularSeries);
     

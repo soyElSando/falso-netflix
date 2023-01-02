@@ -1,19 +1,22 @@
-import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 import { SECCIONES } from "utils/constants";
-import { AuthContext } from "features";
+import{ useAuth, useFetch } from "../../commons";
+import { logoutService } from "features/Login/login.services";
 import "./navBar.css"
 
 const NavBar = () => {
 
-    const navigate = useNavigate();
+    const { logout } = useAuth();
 
-    const { setIsAuth, setUser } = useContext(AuthContext);
+    const { setCanFetch } = useFetch(
+        logoutService,
+        false
+    );
     
     const onLogout =() => {
-    setIsAuth(false);
-    setUser(null);
-    navigate("/Login");
+        setCanFetch(true);
+        logout();
     }
 
   return (
