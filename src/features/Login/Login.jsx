@@ -28,6 +28,14 @@ export const Login = () => {
     setCanFetch(true);
   };
 
+  //TEST LOGIN
+  const onTest = () => {
+    login(form.email);
+      navigate("/", {
+        replace: true,
+      });
+  }; 
+
   //NO AUTH IMPLEMENTATION
   /* const onSubmited = () => {
     login(form.email);
@@ -75,6 +83,9 @@ return <div className="text-center">
         </div>
         <div className="form-group">
           <button type="submit" className="btn btn-danger w-90">Iniciar Sesión</button>
+        </div>
+        <div className="form-group">
+          <button onClick={onTest} className="btn btn-danger w-90">Ingresar sin auth</button>
         </div>
       </form>
       {isLoading && <p>Cargando...</p>}
