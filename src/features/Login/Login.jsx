@@ -24,17 +24,17 @@ export const Login = () => {
   );
 
   //AUTH API IMPLEMENTATION
-  /* const onSubmited = async () => {
+  const onSubmited = async () => {
     setCanFetch(true);
-  }; */
+  };
 
   //NO AUTH IMPLEMENTATION
-  const onSubmited = () => {
+  /* const onSubmited = () => {
     login(form.email);
       navigate("/", {
         replace: true,
       });
-  };
+  }; */
 
   useEffect(() => {
     if (data.user) {
