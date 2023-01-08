@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import {Layout, Login, Inicio, Series, Peliculas, NoPage} from "../../features"
+import {Layout, Login, Inicio, Series, Peliculas, NoPage, Detalles} from "../../features"
 import ProtectedRoutes from "./ProtectedRoutes"
 import PublicRoutes from './PublicRoutes'; 
 
@@ -16,6 +16,7 @@ const AppRoutes = () => {
                             <Route index element={<Inicio />} />
                             <Route path='series' element={<Series />} />
                             <Route path='peliculas' element={<Peliculas />} />
+                            <Route path="detalles/:id" element={<Detalles />} />
                             <Route path='*' element={<NoPage />} />
                             </Route>
                         </Routes>

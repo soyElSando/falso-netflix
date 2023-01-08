@@ -3,6 +3,8 @@
   height: 169px;
   background-color: brown;
   display: inline-block;
+  transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
 }
 
 .container-card img {
@@ -15,4 +17,8 @@
   position: relative;
   bottom: 25px;
   background-color: rgba(0, 0, 0, 0.368);
+}
+
+.container-card:hover {
+  transform: scale(1.0);
 }
