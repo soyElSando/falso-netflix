@@ -13,7 +13,7 @@ export const Card = ({ element }) => {
   return (
     <div className='container-card' onClick={handleClick}>
       <img src={element.backdropLow} alt={`Imagen de ${element.title}`} />
-      <h3>{element.title}</h3>
+      <h3 className="card-img-overlay">{element.title}</h3>
     </div>
   );
 };

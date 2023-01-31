@@ -2,7 +2,7 @@ import {Banner, Spinner, SwipImagesSeries} from "features"
 import { useFetch, TMDBServices } from "commons";
 
 export const Series = () => {
-  const { data, error, isLoading } = useFetch(TMDBServices.getPopularSeries);
+  const { data, error, isLoading } = useFetch(TMDBServices.getTopRatedSeries);
   if (error) {console.error(error)};
 
   return <>

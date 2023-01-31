@@ -1,9 +1,9 @@
 .container-card {
   width: 300px;
-  height: 169px;
-  background-color: brown;
+  height: 188px;
+  background-color: rgb(165, 42, 42, .4);
   display: inline-block;
-  transform: scale(0.95);
+  transform: scale(0.92);
   transition: all 0.3s ease-in-out;
 }
 

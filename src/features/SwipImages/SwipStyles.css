@@ -1,7 +1,29 @@
 .myswiper {
-    width: 100%;
+  width: 300px; 
     height: 100%;
     margin: 20px;
+  }
+
+  @media screen and (min-width: 600px) {
+    .myswiper {
+      width: 600px;
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .myswiper {
+      width: 900px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .myswiper {
+      width: 1200px;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    .myswiper {
+      width: 1500px;
+    }
   }
   
   .swiper-slide {
@@ -40,3 +62,4 @@
     font-variant: initial;
     line-height: 1;
   }
+  

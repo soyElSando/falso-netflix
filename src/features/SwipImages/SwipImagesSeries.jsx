@@ -10,11 +10,29 @@ import "./SwipStyles.css";
 
 export const SwipImagesSeries = () => {
 
-  const { data, isLoading } = useFetch(TMDBServices.getPopularSeries);
+  const { data, isLoading } = useFetch(TMDBServices.getTopRatedSeries);
+  console.log(data)
     
   return (
     <Swiper
-      slidesPerView={5}
+    breakpoints={{  
+      600: {
+        width: 600,
+        slidesPerView: 2,
+      },
+      900: {
+        width: 900,
+        slidesPerView: 3,
+      },
+      1200: {
+        width: 1200,
+        slidesPerView: 4,
+      },
+      1500: {
+        width: 1500,
+        slidesPerView: 5,
+      },
+    }}
       spaceBetween={20}
       navigation={true}
       modules={[Navigation]}

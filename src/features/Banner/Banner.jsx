@@ -28,7 +28,7 @@ export const Banner = ({movies}) => {
       <div className="fill-container">
         <p className="card-text text-left opacityBackground p-3"><h1>{movie.title}</h1><br/>{movie.description}</p>
       </div>
-    </div>
+    </div> 
   </div>
   
   )
