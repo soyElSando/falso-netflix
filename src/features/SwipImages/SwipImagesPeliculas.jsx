@@ -16,6 +16,10 @@ export const SwipImagesPeliculas = () => {
   return (
     <Swiper
     breakpoints={{  
+      300: {
+        width: 300,
+        slidesPerView: 2,
+      },
       600: {
         width: 600,
         slidesPerView: 2,
