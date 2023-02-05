@@ -1,4 +1,4 @@
-import {Banner, Spinner, SwipImagesSeries} from "features"
+import {Banner, Spinner, SwipImages} from "features"
 import { useFetch, TMDBServices } from "commons";
 
 export const Series = () => {
@@ -10,7 +10,8 @@ export const Series = () => {
   {!isLoading ? 
   <>
   <Banner movies={data}/>
-  <SwipImagesSeries />
+  <SwipImages servicio={TMDBServices.getPopularSeries} title="Series populares" />
+  <SwipImages servicio={TMDBServices.getTopRatedSeries} title="Series mejor puntuadas" />
   </> : <Spinner />}
   </div>
   </>;

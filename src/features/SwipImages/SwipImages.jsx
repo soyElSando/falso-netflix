@@ -2,18 +2,20 @@ import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { Card } from "features";
-import { TMDBServices, useFetch } from 'commons';
+import { useFetch } from 'commons';
 import "swiper/css/navigation";
 import "swiper/css";
 import "swiper/css/bundle";
 import "./SwipStyles.css";
 
-export const SwipImagesSeries = () => {
+export const SwipImages = ({servicio, title}) => {
 
-  const { data, isLoading } = useFetch(TMDBServices.getTopRatedSeries);
-  console.log(data)
+  const { data, isLoading } = useFetch(servicio);
+  console.log(servicio);
     
   return (
+  <>
+    <h2>{title}</h2>
     <Swiper
     breakpoints={{  
       300: {
@@ -49,5 +51,6 @@ export const SwipImagesSeries = () => {
             </SwiperSlide>)
         })}
     </Swiper>
+  </>
   );
 };

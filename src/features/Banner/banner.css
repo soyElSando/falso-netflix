@@ -1,4 +1,4 @@
-.miBanner{
+.miBanner .miBannerDetalles{
     width: "20%" !important;
     display: flex;
     flex-direction: column;
@@ -34,6 +34,9 @@
 @media (max-width: 768px){
     .miBanner{
         display:none;
+    }
+    .miBannerDetalles{
+        font-size: small;
     }
 }
 

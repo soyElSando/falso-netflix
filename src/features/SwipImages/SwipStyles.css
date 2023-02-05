@@ -63,3 +63,8 @@
     line-height: 1;
   }
   
+  h2{
+    text-align: left;
+    padding-top: 1rem;
+    padding-left: 20px;
+  }

@@ -12,7 +12,7 @@ export const Detalles = () => {
 
     return (
         <div className="container-fluid text-center">
-            <Banner movies={element}/>
+            <Banner movies={element} detalles={true} />
             <button className="btn volver" onClick={() => navigate(-1)}>Volver</button>
         </div>
     );
